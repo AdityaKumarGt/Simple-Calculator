@@ -17,73 +17,79 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvOne.setOnClickListener {
+        binding.one.setOnClickListener {
             appendExpression("1")
         }
 
-        binding.tvTwo.setOnClickListener {
+        binding.two.setOnClickListener {
             appendExpression("2")
         }
 
-        binding.tvThree.setOnClickListener {
+        binding.three.setOnClickListener {
             appendExpression("3")
         }
 
-        binding.tvFour.setOnClickListener {
+        binding.four.setOnClickListener {
             appendExpression("4")
         }
 
-        binding.tvFive.setOnClickListener {
+        binding.five.setOnClickListener {
             appendExpression("5")
         }
 
-        binding.tvSix.setOnClickListener {
+        binding.six.setOnClickListener {
             appendExpression("6")
         }
 
-        binding.tvSeven.setOnClickListener {
+        binding.seven.setOnClickListener {
             appendExpression("7")
         }
 
-        binding.tvEight.setOnClickListener {
+        binding.eight.setOnClickListener {
             appendExpression("8")
         }
 
-        binding.tvNine.setOnClickListener {
+        binding.nine.setOnClickListener {
             appendExpression("9")
         }
 
-        binding.tvZero.setOnClickListener {
+        binding.zero.setOnClickListener {
             appendExpression("0")
         }
 
-        binding.tvPlus.setOnClickListener {
+        binding.plus.setOnClickListener {
             appendExpression("+")
         }
 
-        binding.tvMinus.setOnClickListener {
+        binding.minus.setOnClickListener {
             appendExpression("-")
         }
 
-        binding.tvMul.setOnClickListener {
+        binding.multiplication.setOnClickListener {
             appendExpression("*")
         }
 
-        binding.tvDivide.setOnClickListener {
+        binding.divide.setOnClickListener {
             appendExpression("/")
         }
+        binding.percent.setOnClickListener {
+            appendExpression("/100")
+        }
+        binding.doubleZero.setOnClickListener {
+            appendExpression("00")
+        }
 
-        binding.tvDot.setOnClickListener {
+        binding.dot.setOnClickListener {
             appendExpression(".")
         }
 
-        binding.tvClear.setOnClickListener {
+        binding.clear.setOnClickListener {
             expression = ""
             binding.tvExpression.text = ""
             binding.tvResult.text = ""
         }
 
-        binding.tvBack.setOnClickListener {
+        binding.del.setOnClickListener {
             if (expression.isNotEmpty()) {
                 expression = expression.substring(0, expression.length - 1)
                 binding.tvExpression.text = expression
@@ -91,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvResult.text = ""
         }
 
-        binding.tvEquals.setOnClickListener {
+        binding.equal.setOnClickListener {
             if (expression.isNotEmpty()) {
                 try {
                     val result = ExpressionBuilder(expression).build().evaluate()
