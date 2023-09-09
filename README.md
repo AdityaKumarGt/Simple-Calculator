@@ -13,7 +13,7 @@ This is a simple calculator app for Android devices. It provides basic arithmeti
 ## Usage:
 * Open the Calculator app on your Android device.
 * Use the numeric keypad to enter numbers.
-* Select the desired arithmetic operation (+, -, *, /) from the app interface.
+* Select the desired arithmetic operation (+, -, *, /, %) from the app interface.
 * Tap the "=" button to perform the calculation.
 * The result will be displayed on the screen.
 * To clear the input, press the "C" button.
